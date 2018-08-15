@@ -33,7 +33,7 @@ function createWindow () {
 	}
 
 	mainWindow = new BrowserWindow(windowOptions)
-	mainWindow.loadURL(path.join('file://', __dirname, 'app/index.html'))
+	mainWindow.loadURL('http://localhost:8080/app/index.html')
 
 	// Launch fullscreen with DevTools open, usage: npm run debug
 	if (debug) {
