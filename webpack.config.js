@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const WriteFilePlugin = require('write-file-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -35,6 +36,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html'
-    })
+		}),
+		new WriteFilePlugin(),
   ]
 }

@@ -3,13 +3,11 @@ import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Drawer from '@material-ui/core/Drawer'
 import IconButton from '@material-ui/core/IconButton'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
 import MenuIcon from '@material-ui/icons/Menu'
 import Toolbar from '@material-ui/core/Toolbar'
 
 import Container from './Container'
+import MenuItems from './MenuItems'
 
 class Home extends React.Component {
 	constructor() {
@@ -37,11 +35,7 @@ class Home extends React.Component {
 					onClick={() => { this.toggleDrawer(false) }}
 					onKeyDown={() => { this.toggleDrawer(false) }}
 				>
-					<List>
-						<ListItem button>
-							<ListItemText primary="Home"></ListItemText>
-						</ListItem>
-					</List>
+					<MenuItems />
 				</div>
 			</Drawer>
 		)
